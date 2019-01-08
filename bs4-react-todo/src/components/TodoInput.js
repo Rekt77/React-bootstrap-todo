@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, FormGroup, FormControl, Form, Row, Col } from 'react-bootstrap'
+import { Button, FormGroup, FormControl, Form, Grid, Row, HelpBlock } from 'react-bootstrap'
 
 const ToDoInput = ({value, onChange, onInsert}) => {
     const handleKeyPress = (e) => {
@@ -9,9 +9,9 @@ const ToDoInput = ({value, onChange, onInsert}) => {
     }
 
     return(
+        <Grid>
         <Row>
-        <Col xs={12} md={8}>
-        <Form inline>
+        <Form>
         <FormGroup
             controlId="formBasicText"
             >
@@ -22,11 +22,13 @@ const ToDoInput = ({value, onChange, onInsert}) => {
                 onChange={onChange}
                 onKeyPress={handleKeyPress}
             />
+            <HelpBlock>Give me your schedules.</HelpBlock>
         </FormGroup>
-        <Button onClick={onInsert}>추가</Button>
+        <Button bsStyle="primary" className="pull-right" onClick={onInsert}>add schedules</Button>
         </Form>
-        </Col>
         </Row>
+        </Grid>
+
     );
 }
 
