@@ -1,13 +1,25 @@
 import React from 'react';
-import { Jumbotron } from 'react-bootstrap'
+import { Navbar,Row } from 'react-bootstrap'
+import logo from '../logo.svg'
 
-const Jumbotrons = ({children}) => {
+const style = {
+    width:'30px',
+    height:'30px'
+}
+const NavigationBar = () => {
     return(
-        <Jumbotron>
-            <h1>일정관리</h1>
-            {children}
-        </Jumbotron>
+        <Navbar>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <Row>
+                        <a href="#home">
+                            <img src={logo} style={style} alt="AnyDO" pullLeft/>AnyDO.js
+                        </a>
+                    </Row>
+                </Navbar.Brand>
+            </Navbar.Header>
+        </Navbar>
     );
 }
 
-export default Jumbotrons;
+export default NavigationBar;
