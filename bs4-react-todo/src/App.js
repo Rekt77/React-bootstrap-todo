@@ -4,7 +4,7 @@ import PageTemplates from './components/PageTemplates';
 import MainJumbo from './components/MainJumbo';
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList';
-import TodoItem from './components/TodoItem';
+
 
 class App extends Component {
   state = {
@@ -17,6 +17,16 @@ class App extends Component {
   id = 1
   getId = () => {
     return ++this.id;
+  }
+  handleRemove = (id) => {
+    console.log("remove")
+    const index = this.state.todos.findIndex(todo => todo.id === id);
+    this.setState({
+      todos:[
+        ...this.state.todos.slice(0,index),
+        ...this.state.todos.slice(index+1,this.state.todos.length)
+      ]
+    })
   }
   handleChange = (e) => {
     const {value} = e.target;
@@ -31,6 +41,7 @@ class App extends Component {
       id: this.getId()
     }
     this.setState({
+      input:'',
       todos:[...this.state.todos, newTodo]
     });
   }
@@ -39,7 +50,7 @@ class App extends Component {
       <PageTemplates>
         <NavigationBar/>
         <MainJumbo>
-          <TodoList todos={this.state.todos}/>
+          <TodoList todos={this.state.todos} onDoubleClick={this.handleRemove}/>
           <TodoInput onChange={this.handleChange} value={this.state.input} onInsert={this.handleInsert}/>
         </MainJumbo>
       </PageTemplates>
