@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, FormGroup, FormControl, Form, Grid, Row, HelpBlock } from 'react-bootstrap'
+import { Container, Input, FormGroup, Form, Row, Label} from 'reactstrap'
+import { Button } from 'reactstrap';
 
 
 const ToDoInput = ({value, onChange, onInsert}) => {
@@ -10,25 +11,23 @@ const ToDoInput = ({value, onChange, onInsert}) => {
     }
 
     return(
-        <Grid>
+        <Container>
         <Row>
         <Form>
-        <FormGroup
-            controlId="formBasicText"
-            >
-            <FormControl
+        <FormGroup>
+            <Label>What do you going to do?</Label>
+            <Input
                 type="text"
                 value={value}
                 placeholder="할일을 입력하세요"
                 onChange={onChange}
                 onKeyPress={handleKeyPress}
             />
-            <HelpBlock>Give me your schedules.</HelpBlock>
         </FormGroup>
-        <Button bsStyle="primary" className="pull-right" onClick={onInsert}>add schedules</Button>
+        <Button className="pull-right" color="primary" onClick={onInsert}>add schedules</Button>
         </Form>
         </Row>
-        </Grid>
+        </Container>
 
     );
 }

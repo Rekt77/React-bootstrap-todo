@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar,Row } from 'react-bootstrap'
+import { Navbar, NavbarBrand } from 'reactstrap'
 import logo from '../logo.svg'
 
 const style = {
@@ -9,16 +9,12 @@ const style = {
 const NavigationBar = ({children}) => {
     return(
         <div>
-            <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <Row>
+            <Navbar dark>
+                <NavbarBrand>
                             <a href="#home">
-                                <img src={logo} style={style} alt="AnyDO" pullLeft/>AnyDO.js
+                                <img src={logo} style={style} alt="AnyDO"/>AnyDO.js
                             </a>
-                        </Row>
-                    </Navbar.Brand>
-                </Navbar.Header>
+                </NavbarBrand>
             </Navbar>
             <div>
                 {children}

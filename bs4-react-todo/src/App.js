@@ -6,6 +6,16 @@ import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList';
 
 class App extends Component {
+  state = {
+    input:''
+  }
+
+  handleChange = (e) => {
+    const {value} = e.target;
+    this.setState({
+      input:value
+    })
+  }
   render() {
     return (
       <PageTemplates>

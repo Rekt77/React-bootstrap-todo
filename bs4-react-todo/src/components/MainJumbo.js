@@ -1,15 +1,15 @@
 import React from 'react';
-import { Jumbotron, Grid } from 'react-bootstrap'
+import { Jumbotron, Container } from 'reactstrap'
 
 const MainJumbo = ({children}) => {
     return(
-        <Grid>
+        <Container>
         <Jumbotron>
             <h2>Welcom to AnyDO.JS</h2>
             <hr/>
             {children}
         </Jumbotron>
-        </Grid>
+        </Container>
     );
 }
 
