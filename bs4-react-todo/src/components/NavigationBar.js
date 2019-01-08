@@ -6,19 +6,24 @@ const style = {
     width:'30px',
     height:'30px'
 }
-const NavigationBar = () => {
+const NavigationBar = ({children}) => {
     return(
-        <Navbar>
-            <Navbar.Header>
-                <Navbar.Brand>
-                    <Row>
-                        <a href="#home">
-                            <img src={logo} style={style} alt="AnyDO" pullLeft/>AnyDO.js
-                        </a>
-                    </Row>
-                </Navbar.Brand>
-            </Navbar.Header>
-        </Navbar>
+        <div>
+            <Navbar>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <Row>
+                            <a href="#home">
+                                <img src={logo} style={style} alt="AnyDO" pullLeft/>AnyDO.js
+                            </a>
+                        </Row>
+                    </Navbar.Brand>
+                </Navbar.Header>
+            </Navbar>
+            <div>
+                {children}
+            </div>
+        </div>
     );
 }
 
