@@ -7,6 +7,7 @@ const MainJumbo = ({children}) => {
         <Jumbotron>
             <h2>Welcom to AnyDO.JS</h2>
             <hr/>
+            <p className="lead">안녕하세요</p>
             {children}
         </Jumbotron>
         </Container>
