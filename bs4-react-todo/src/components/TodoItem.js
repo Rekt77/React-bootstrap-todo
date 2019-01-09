@@ -3,11 +3,26 @@ import { ListGroupItem } from 'reactstrap'
 
 
 export default class TodoItem extends Component {
-  render() {
+    
 
-    return (
-        <ListGroupItem>{this.props.children}</ListGroupItem>
-      
-    )
-  }
+    render() {
+    const style = {
+        textDecoration:"line-through"
+    }
+
+    if(this.props.done){
+    return(
+        <ListGroupItem style={style} onClick={this.props.onClick}>
+            <input type="checkbox" checked={this.props.done} readOnly/>
+            {this.props.children}
+        </ListGroupItem>
+    
+    )} else {
+    return(
+        <ListGroupItem onClick={this.props.onClick}>
+            <input type="checkbox" checked={this.props.done} readOnly/>
+            {this.props.children}
+        </ListGroupItem>
+    )}
+};
 }
