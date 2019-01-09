@@ -3,7 +3,9 @@ import { ListGroupItem } from 'reactstrap'
 
 
 export default class TodoItem extends Component {
-    
+    shouldComponentUpdate = (nextProps, nextState) => {
+        return this.props.done !== nextProps.done
+      }
 
     render() {
     const style = {

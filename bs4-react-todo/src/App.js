@@ -9,10 +9,7 @@ import TodoList from './components/TodoList';
 class App extends Component {
   state = {
     input:'',
-    todos:[
-      {id:0, text: '리액트공부하기', done:true},
-      {id:1, text: '컴포넌트 스타일링 해보기', done:false},
-    ]
+    todos:[]
   }
   id = 1
   getId = () => {

@@ -6,7 +6,6 @@ const MainJumbo = ({children}) => {
         <Container>
         <Jumbotron>
             <h2>Welcom to AnyDO.JS</h2>
-            <hr/>
             <p className="lead">당신의 일정을 알려드릴게요</p>
             {children}
         </Jumbotron>
