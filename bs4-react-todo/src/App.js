@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import NavigationBar from './components/NavigationBar'
 import PageTemplates from './components/PageTemplates';
 import MainJumbo from './components/MainJumbo';
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList';
+import TodoInputContainer from './container/TodoInputContainer'
+import TodoListContainer from './container/TodoListContainer';
 
 
 class App extends Component {
@@ -65,8 +65,8 @@ class App extends Component {
       <PageTemplates>
         <NavigationBar/>
         <MainJumbo>
-          <TodoList todos={this.state.todos} onDoubleClick={this.handleRemove} onClick={this.handleToggle}/>
-          <TodoInput onChange={this.handleChange} value={this.state.input} onInsert={this.handleInsert}/>
+          <TodoListContainer/>
+          <TodoInputContainer/>
         </MainJumbo>
       </PageTemplates>
     );
