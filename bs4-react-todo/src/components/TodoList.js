@@ -14,7 +14,7 @@ export default class TodoList extends Component {
     const {todos, onClick } = this.props;
 
     const todoList = todos.map(
-    (todo) => (
+    (todo) => ( todo.get !==undefined ?
         <TodoItem
             key={todo.get('id')}
             done={todo.get('done')}
@@ -28,8 +28,9 @@ export default class TodoList extends Component {
             style={deleted}>
             delete
             </Badge>
-        </TodoItem>
-    ))
+        </TodoItem> : null
+    )
+    )
     return (
       <ListGroup>
           {todoList}
