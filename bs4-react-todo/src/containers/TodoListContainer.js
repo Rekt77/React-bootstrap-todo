@@ -17,14 +17,13 @@ class TodoListContainer extends Component {
     }
     render(){
         const { todos } = this.props;
-        const { handleToggle, handleRemove } = this;
-
+        const eventHandler = {
+            handleToggle:this.handleToggle,
+            handleRemove:this.handleRemove}
         return (
             <TodoList
                 todos={todos}
-                onClick={handleToggle}
-                onDoubleClick={handleRemove}
-            />
+                onClick={eventHandler}/>
         )
     }
 }

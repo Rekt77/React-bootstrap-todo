@@ -11,9 +11,7 @@ const NavigationBar = ({children}) => {
         <div>
             <Navbar dark>
                 <NavbarBrand>
-                            <a href="#home">
-                                <img src={logo} style={style} alt="AnyDO"/>AnyDO.js
-                            </a>
+                    <p><img src={logo} style={style} alt="AnyDO"/>AnyDO.js</p>
                 </NavbarBrand>
             </Navbar>
             <div>

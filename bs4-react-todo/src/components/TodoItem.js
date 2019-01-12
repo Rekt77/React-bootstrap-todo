@@ -14,15 +14,15 @@ export default class TodoItem extends Component {
 
     if(this.props.done){
     return(
-        <ListGroupItem style={style} onClick={this.props.onClick}>
-            <input type="checkbox" checked={this.props.done} readOnly/>
+        <ListGroupItem style={style} >
+            <input type="checkbox" onClick={this.props.onClick} checked={this.props.done} readOnly/>
             {this.props.children}
         </ListGroupItem>
     
     )} else {
     return(
-        <ListGroupItem onClick={this.props.onClick}>
-            <input type="checkbox" checked={this.props.done} readOnly/>
+        <ListGroupItem >
+            <input type="checkbox" onClick={this.props.onClick} checked={this.props.done} readOnly/>
             {this.props.children}
         </ListGroupItem>
     )}
