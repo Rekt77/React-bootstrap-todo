@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import NavigationBar from './components/NavigationBar'
 import PageTemplates from './components/PageTemplates';
 import MainJumbo from './components/MainJumbo';
-import TodoInputContainer from './container/TodoInputContainer'
-import TodoListContainer from './container/TodoListContainer';
+import TodoInputContainer from './containers/TodoInputContainer'
+import TodoListContainer from './containers/TodoListContainer';
 
 
 class App extends Component {
