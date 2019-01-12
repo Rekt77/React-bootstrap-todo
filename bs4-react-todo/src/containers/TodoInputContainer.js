@@ -46,6 +46,6 @@ export default connect(
     }),
     (dispatch) => ({
         InputActions: bindActionCreators(inputActions, dispatch),
-        TodosActions: bindActionCreators(todoActions, dispatch)
+        TodosActions: bindActionCreators(todosActions, dispatch)
     })
 )(TodoInputContainer);
