@@ -22,8 +22,8 @@ class TodoListContainer extends Component {
         return (
             <TodoList
                 todos={todos}
-                onToggle={handleToggle}
-                onRemove={handleRemove}
+                onClick={handleToggle}
+                onDoubleClick={handleRemove}
             />
         )
     }

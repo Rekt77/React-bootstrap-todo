@@ -11,17 +11,16 @@ export default class TodoList extends Component {
     const deleted = {
         background:"red"
     }
-
     const {todos, onDoubleClick, onClick } = this.props;
     
     const todoList = todos.map(
     (todo) => (
         <TodoItem
-            key={todo.id}
-            done={todo.done}
-            onClick={()=> onClick(todo.id)}>
-            {todo.text}
-            <Badge onDoubleClick={() => onDoubleClick(todo.id)} style={deleted}>delete</Badge>
+            key={todo.get('id')}
+            done={todo.get('done')}
+            onClick={()=> onClick(todo.get('id'))}>
+            {todo.get('text')}
+            <Badge onDoubleClick={() => onDoubleClick(todo.get('id'))} style={deleted}>delete</Badge>
         </TodoItem>
     ))
     return (
