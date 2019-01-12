@@ -12,7 +12,7 @@ const ToDoInput = ({value, onChange, onInsert}) => {
 
     return(
         <Container>
-            <Label>What do you going to do?</Label>
+            <Label>어떤 일정이 있으신가요?</Label>
             <Row>
             <Input
                 type="text"
@@ -23,7 +23,7 @@ const ToDoInput = ({value, onChange, onInsert}) => {
                 onKeyPress={handleKeyPress}
             />
             <br/>
-            <Button className = "pull-right" color="primary" onClick={onInsert}>add schedules</Button>
+            <Button className = "pull-right" color="primary" onClick={onInsert}>일정 추가</Button>
             </Row>
         </Container>
     );

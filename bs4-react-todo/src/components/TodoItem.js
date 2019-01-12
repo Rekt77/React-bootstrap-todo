@@ -9,7 +9,7 @@ export default class TodoItem extends Component {
 
     render() {
     const style = {
-        textDecoration:"line-through"
+        textDecoration:"line-through",
     }
 
     if(this.props.done){

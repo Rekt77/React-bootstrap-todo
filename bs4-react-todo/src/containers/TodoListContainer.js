@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TodoList from '../components/TodoList';
-
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -21,6 +20,7 @@ class TodoListContainer extends Component {
             handleToggle:this.handleToggle,
             handleRemove:this.handleRemove}
         return (
+            
             <TodoList
                 todos={todos}
                 onClick={eventHandler}/>

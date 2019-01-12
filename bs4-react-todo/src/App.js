@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import NavigationBar from './components/NavigationBar'
 import PageTemplates from './components/PageTemplates';
 import MainJumbo from './components/MainJumbo';
-import TodoInputContainer from './containers/TodoInputContainer'
+import TodoInputContainer from './containers/TodoInputContainer';
 import TodoListContainer from './containers/TodoListContainer';
+import ProgressBarContainer from './containers/ProgressBarContainer';
+
 
 
 class App extends Component {
@@ -65,6 +67,7 @@ class App extends Component {
       <PageTemplates>
         <NavigationBar/>
         <MainJumbo>
+          <ProgressBarContainer/>
           <TodoListContainer/>
           <TodoInputContainer/>
         </MainJumbo>
